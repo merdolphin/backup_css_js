@@ -30,9 +30,9 @@ img {
 
 /* Headlines */
 h1,h2,h3 { font-family: "Lucida Grande", Arial,Helvetica; }
-h1 { font-size:1.8em; text-align:center;}
-h2 { font-size:1.6em; margin:0 0 1em 0; color:#FF00FF;}
-h3 { font-size:1.2em; color:#CC0066;}
+h1 { font-size:1.4em; text-align:center;}
+h2 { font-size:1.2em; margin:0 0 1em 0;}
+h3 { font-size:1.0em;}
 
 
 /* Links */
