@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<title>scripts</title>
+<link rel="shortcut icon" HREF="imgs/zhao.ico" TYPE="image/x-icon">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">   
+<meta name="Description" content="Zhao Li Na NTU scripts">
+<meta name="Keywords" content="Zhao Li Na NTU PAP">
+<link rel="stylesheet" type="text/css" href="css/style_script.css" media="screen">
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-34505451-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+<!--<script type="text/javascript">
+	var counter;
+	document.getElementByID("
+-->
+
+</head>
+
+<body>
+      
+			
+	<h1>Some Short Scripts and Works</h1>
+	<h2><a href="index.html">Zhao Li Na</a></h2>
+	<h3>SCE, NTU</h3>	
+	
+	<div class="update">
+	<p>Last updated on Sat Aug 24 01:10:17 SGT 2013</p>
+	</div>
+
+	
+	<nav>
+	<ul>
+	<li class="c1"><br></li>
+    <li><a href="processing.php">kgml2txt webserver</a></li>
+    <li class="c1"><br></li>
+	<li><a href="scripts.html#Java">Java</a></li>
+	<li class="c1"><br></li>
+	<li><a href="scripts.html#perl">perl</a></li>
+	<li class="c1"><br></li>
+	<li><a href="scripts.html#python">python</a></li>
+	<li class="c1"><br></li>
+	<li><a href="scripts.html#bash">bash</a></li>
+	<li class="c1"><br></li>
+	<li><a href="scripts.html#latex">Latex</a></li>
+     <li class="c1"><br></li>
+     <li><a href="scripts.html#c++">C/C++</a></li>
+    <li class="c1"><br></li>
+   
+	</ul>
+	</nav>
+
+	<article>
+	<div >
+
+	Those scripts are free: you can redistribute it and/or modify it 
+	under the terms of the <a href="http://www.gnu.org/licenses/gpl.txt">GNU General Public License</a> as published by
+    	the Free Software Foundation, either version 3 of the License, or
+    	(at your option) any later version.<br>
+	<br>
+    	This program is distributed in the hope that it will be useful,
+    	but WITHOUT ANY WARRANTY; without even the implied warranty of
+    	MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    	GNU General Public License for more details.<br>
+	<br>
+    	You should have received a copy of the GNU General Public License
+    	along with some programs.  If not, see <a href="http://www.gnu.org/license/gpl.html">"&lt;http://www.gnu.org/licenses/&gt;"</a>.
+	</div>
+
+	<br>
+	<br>
+
+
+
+
+	<div id="java">
+    <h3>Java</h3>
+	<dl>
+     <dt>
+    <h5>Processing XML file</h5>
+    <p>One <a href="processingXML.jar">java program </a> to handle the KGML formate from KEGG to plain txt.</p>
+    <p>Example:</p>
+    <p>For p53 signaling pathway - Homo sapiens (human) <a href=http://www.genome.jp/kegg-bin/show_pathway?org_name=hsa&mapno=04115&mapscale=&show_description=hide>[link]</a></p>
+    <p>Download the kgml file and the web source code from above link and save as:  hsa04115.xml and p53_show_pathway.htm</a> and then run:</p>
+    <p>java -jar processingXML.jar hsa04115.xml p53_show_pathway.htm output.txt</p>
+    <p>Here the output.txt is the output.</p>
+    <p>Download <a href="ProcessingXML.zip"> source code </a>, <a href=hsa04115.xml> hsa04115.xml </a>, <a href=p53_show_pathway.htm> p53_show_pathway.htm </a>,
+    <a href="processingXML.jar">processingXML.jar</a> and <a href=output.txt> output.txt </a>.</p>
+    </dt>
+
+    <h5>Dijkstra Algorithm</h5>
+	<dt>One <a href="problem083.jar">Java program </a>(usage: java -jar problem083.jar matrix.txt) uses Dijkstra's algorithm to solve <a href="http://projecteuler.net/problem=83">Euler Project Problem 83</a></dt>
+    <p>The detailed src files:</p>
+    <p><a href = "Element.java">lement.java</a> : class uses to define the element of the matrix.</p>
+    <p><a href="DijkstraAlgorithmEngine.java">DijkstraAlgorithmEngine.java </a> is the algorithm implementation.</p>
+    <p><a href="Problem083.java">Problem083.java</a> : the main method.</p>
+
+	 </dl>
+	</div>
+
+
+
+	<div id="perl">
+    <h3>Perl</h3>
+	<dl>
+	<dt><a href="bibextract" id="bibextractdownload">bibextract</a></dt>
+	<dd>This is bibextract, a Perl script to extract the .bib entry for a certain .tex file from .bib database. You can also get it from my <a href="https://github.com/merdolphin">git repository</a>.</dd>
+   	</dl>
+	</div>
+
+    <div id="python">
+    <h3>Python</h3>
+    <dl>
+    <dt><a href="atom2residues" id="atom2residues">atom2residue</a></dt>
+    <dd>Translate the atom back to the corresponding residues</dd>
+     <br>
+     <dt><a href="CommonSublists" id="commonSublist">CommonSublists</a></dt>
+    <dd>Find the common pathway out.</dd>
+    <br>
+    <dt><a href="pathway-list-generate">Pathway-list-generate</a></dt>
+    <dd>Extract the pathway from the trajectories as lists.</dd>
+    </dl>
+    </div>
+
+    <div id="bash">
+    <h3>Bash</h3>
+    <p>There are many short bash scripts, but most are very specific, so I won't put it here one by one. </p>
+    <p>There are still some scripts, written in the process of data analysis, I feel it's worthy sharing.</p>
+    <p><a href=https://github.com/merdolphin/scripts_bk> Here </a> is one link.</p> 
+    </div>
+
+	<div id="latex">
+    <h3>Latex</h3>
+	<dl>
+	<dt><a href="NTU_phd_dissertation_template.tar.gz">Dissertation Template</a></dt>
+	<dd>The template for the PhD thesis format requirement of NTU. Some refinement works still needed. Latest update I will push into git repository.</dd>
+    <br>
+    <dt><h4>Project timeline example -- use pgfgantt package</h4></dt>
+	<dd>One project timeline template with <a href="timeline.tex"> [Source]</a> and <a href="timeline.pdf">[click to download PDF]</a></dd>
+
+	</dl>
+	</div>
+    <!--
+    <div id="presentation">
+    <h4>Presentation PDFs</h4>
+    <p>Some presentation PDFs contain some paper I read in the past and some work I have done without and won't be published.</p>
+    <ul>
+    <li> <a href="abeta.pdf">Amyolid beta peptides and its aggregation in membrane</a></li>
+    <li><a href="serotonin.pdf">Serotonin</a></li>
+    <li><a href="toxic.pdf">Abeta toxic mechanism</a></li>
+    <li><a href="heme.pdf">Heme </a></li>
+    </ul>
+    </div>
+    
+    
+    <div id="dissertation">
+    <h4>dissertation (preliminary draft)</h4>
+    <a href="dissertation.pdf">[Download PDF version]</a>
+    </div>
+    -->
+
+    <div id="c++">
+    <h3>C/C++</h3>
+    <p>Click <a href=https://github.com/merdolphin/projectEuler> here </a> to access some C++ codes, which are written to solve those problems from Euler project.</p>
+    </div>
+
+	<br>
+	<br>
+	<div style="text-align:center">
+	<p>To be continue ... when I am free...</p>
+	</div>	
+
+    <div id="notes">
+        <h4>Gromacs notes</h4>
+        <p><a href="http://www.bevanlab.biochem.vt.edu/Pages/Personal/justin/gmx-tutorials/"> GROMACS Tutorials</a> -- His tutorials are very nice.</p>
+        
+            <p>PDB format (in awk):</p> 
+        <p>printf("ATOM  %5d%4s%5s A%4d    %8.3f%8.3f%8.3f%6.2f%6.2f%12s \n",$2,$3,$4,$6,$7,$8,$9,$10,$11,$12)</p>
+        
+
+        <h4>NAMD notes </h4>
+        <p><a href="http://bionano.physics.illinois.edu/Tutorials/"> NAMD Tutorials</a> --- Those tutorials are very nice too.</p>
+        <p><a href="http://www.myofilament.org/documents/howto/modeling/NAMD_notes.htm"> some notes good for references </a></p>
+    
+    </div>
+
+
+	<!--<div id="phd">
+    <h4>survival</h4>
+    
+    <h5>Tools/commands</h5>
+    <p>There are some very basic tools/commands are cool to master/VeryFamiliar if you are doing the computation.</p>
+    <p>I only know very little, so here I can only list few the most used tools/commands in my work.</p>
+    <p>awk; bash; sed; ... </p>
+    <p>grep; find; uniq; sort; paste; cut; htop; ... </p>
+    <p>here are some cool excerpts of sed I met before, you can find lots of tutorials online about it:</p>
+    <p>$d		# delete the last line of the file</p>
+    <p>/[0-9]\{3\}/p    # print lines with 3 consecutive digits</p>
+    <p>5!s/ham/cheese/  # except on line 5, replace 'ham' with 'cheese'</p>
+    <p>/awk/!s/aaa/bb/  # unless 'awk' is found, replace 'aaa' with 'bb'</p>
+    <p>17,/foo/d        # delete all lines from line 17 up to 'foo'</p>
+    <p>sed '/Owner: /{s/yours/mine/g;s/your/my/g;s/you/me/g;}' file</p>
+    <p>echo -e abccba n abcecba |sed 's/^ //g' | sed -n '/\(.\)\(.\)\(.\)\3\2\1/p'</p>
+    
+    <h5>Cluster, MPI</h5>
+    <p>pbstop; pbsnodes -a; qstat; ... </p>
+    <p>Here is the <a href="config.site"> config.site </a>, put it in ~/etc which will simplify lots of your work during packages installation on cluster.</p>
+    <p>There are also some funny things you can do:</p>
+    <p>Set CORN to get report every morning about the process of your jobs.</p>
+
+    <h5>ssh</h5>
+    <p>The ssh-key is encouraged to use than password from the security reason.</p>
+    <p>There are many tutorials giving the specific instructions about how to use ssh-keygen.</p>
+    <p>Here I put one of mine <a href="config">config </a>file for your adaption and reference.</p>
+    <p>There are also many interesting/funny topics in this aspects. Such as: </p>
+    <p>ddclient</p>
+    <p>Set "PermitRootLogin" to "no" and given special port to listen to. Those can be set in /etc/ssh/sshd_config. </p>
+    <p>sshguard</p>
+    <p>I bought issh from apple store, which is good to connect to your laptop from your phone.</p>
+    
+    </div>
+    -->
+    <h4>Acknowledgement</h4>
+    <p>At the end, I wish to thank my friends as well as many other people who helped and guided me. I really appreciate the spirit of knowledge sharing. Those great people I met really aspire me to do something constructive and helpful.</p>
+
+    </article>
+
+	<footer>
+	<div id="copyright">
+  		<span class="copyright">Copyright (c) 2012 2013 Zhao Li Na </span>
+	</div>
+	</footer>
+	
+
+
+</body>
+
+</html>
+
