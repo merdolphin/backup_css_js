@@ -32,10 +32,11 @@
 			
 	<h1>kgml2txt server</h1>
 	
-	
+	<h3>convert the info of kgml from KEGG database into the plain text.</h3>
 	
 	<div class="update">
-	<p>update: Sun Oct 20 23:39:26 SGT 2013</p>
+	<p>update: Mon Oct 21 23:26:15 SGT 2013</p>
+    <p>Any problem: zhao0139@e.ntu.edu.sg</p>
 	</div>
 
 	
@@ -44,47 +45,57 @@
 
     <form  method="post">
     PATHWAY: hsa id <input type = "text" name = "hsaid" class="form"> eg: 04110 for <a href="http://www.genome.jp/kegg-bin/show_pathway?hsa04110" > Cell Cycle </a>.
-    <?php runjava() ?>
+       
+ 
     </form>
     <br>
     
     <?php
-   
-    function runjava(){ 
-       
+      
+       exec('rm public/result.txt');
+
        if($_POST["hsaid"]){
             
         $javacmd = 'public/processingxml.sh ' . $_POST["hsaid"]; 
             
         exec($javacmd);
+  
         exec('rm /tmp/*.htm');
         exec('rm /tmp/*.xml');
         }
-    }
+    
     ?>
 
     <?php
     function read(){       
         $filename = "/tmp/".$_POST["hsaid"].".txt"; 
-        $cmd = "cp " . $filename . " public/result.txt";
-        exec($cmd);
-        $fh = fopen($filename, "r");
-        while( ! feof($fh) ){
-            $line = fgets($fh);
-            $array = split("\t", $line);
-            //echo "$array[0]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$array[1] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$array[2]";
-            //echo chr(13);
-            printf("%s\t%s\t%s\n", $array[0], $array[1],$array[2]);
-            
+        
+        if( file_exists($filename) ){
+            if( filesize($filename) < 120 ){
+                echo "Please input a vaild hsa id ...";
+                echo chr(13);
+            }else{
+
+                $cmd = "cp " . $filename . " public/result.txt";
+                exec($cmd);
+                $fh = fopen($filename, "r");
+                    while( ! feof($fh) ){
+                    $line = fgets($fh);
+                    $array = split("\t", $line);
+                    //echo "$array[0]&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$array[1] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$array[2]";
+                    //echo chr(13);
+                    printf("%s\t%s\t%s\n", $array[0], $array[1],$array[2]);
+                }
+                fclose($fh);
+            }
         }
-        fclose($fh);
      }
 
     ?>
 
     <br>
 
-    <textarea rows="15" cols="110" id="resultshow" style="resize: none;" data-role="none"> <?php read(); ?></textarea>
+    <textarea rows="15" cols="120" id="resultshow" style="resize: none;" data-role="none"> <?php read(); ?></textarea>
 
     <br>
     <br>
@@ -95,10 +106,10 @@
 
 
     </article>
-
+    
 	<footer>
 	<div id="copyright">
-  		<span class="copyright">Copyright (c) 2012 2013 Zhao Li Na</span>
+  		<span class="copyright">Copyright (c) 2012 2013 Zhao Li Na </span>
 	</div>
 	</footer>
 	
